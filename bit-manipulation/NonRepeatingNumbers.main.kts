@@ -62,9 +62,7 @@ fun findTwoUniqueNumbers(numbersList:List<Int>):Pair<Int,Int>{
 }
 fun findTwoUniqueNumbersV2(numbersList:List<Int>):Pair<Int,Int>{
     val xorOfList = getXOROfList(numbersList)
-    val inverseXOR = xorOfList.inv()
-    val twoComplement = inverseXOR+1
-    val rsbMask = xorOfList and twoComplement
+    val rsbMask = getRightMostSetBitMasked(xorOfList)
     val array1 = mutableListOf<Int>()
     val array2 = mutableListOf<Int>()
 
@@ -80,6 +78,21 @@ fun findTwoUniqueNumbersV2(numbersList:List<Int>):Pair<Int,Int>{
 
 
 }
+
+fun getRightMostSetBitMasked(a:Int):Int{
+    val inverseA = a.inv()
+    val twoComplementOfA = inverseA +1
+    return a and twoComplementOfA
+}
+
+
+
+//00101
+//11010
+//00001
+//11011
+
+
 
 
 
