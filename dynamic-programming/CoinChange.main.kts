@@ -2,6 +2,7 @@
 
 //Problem source: https://450dsa.com/dynamic_programming problem number 0
 //Problem link : https://practice.geeksforgeeks.org/problems/coin-change2448/1
+//Learning At each step of recursion you need to take decision that either the coin is present or not
 val resp = main(listOf(1,2),5)
 println(resp)
 
