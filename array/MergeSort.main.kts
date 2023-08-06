@@ -6,10 +6,12 @@
 
 
 
+
+
 fun mergeSort(arr:List<Int>):List<Int>{
     if(arr.size == 1) return listOf(arr.first())
     val midIndex = (arr.size-1)/2
-   val sortedArr =   merge(mergeSort(arr.subList(0,midIndex+1)) ,arr.subList(midIndex+1,arr.size))
+   val sortedArr =   mergeV2(mergeSort(arr.subList(0,midIndex+1)) ,mergeSort(arr.subList(midIndex+1,arr.size)))
     return sortedArr
 
 }
@@ -59,12 +61,13 @@ fun mergeV2(sortedArr1:List<Int>, sortedArr2:List<Int>):List<Int>{
         currentIndex++
 
     }
-    for (x in i+1..arraySize1-1){
+    for (x in i..arraySize1-1){
         tempList.set(currentIndex, sortedArr1.get(x))
         currentIndex++
     }
-    for (x in j+1..arraySize2-1){
+    for (x in j..arraySize2-1){
         tempList.set(currentIndex, sortedArr2.get(x))
+        currentIndex++
     }
     return tempList
 
