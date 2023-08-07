@@ -2,6 +2,7 @@
 
 //Problem source: https://450dsa.com/array problem number 11
 //Problem link : https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
+//Learning:V3 is done by the gap method.gap method is used in shell short
 val resp = mergeV3(listOf(1 ,3 ,5, 7).toMutableList(), listOf(0 ,2, 6, 8, 9).toMutableList())
 println(resp)
 
