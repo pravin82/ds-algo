@@ -22,3 +22,4 @@ fun insertNodeInBST(root:TreeNode, value:Int){
     else if(value > root.value)  insertNodeInBST(root.right!!, value)
     else  insertNodeInBST(root.left!!, value)
 }
+
