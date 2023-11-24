@@ -6,7 +6,8 @@ data class TreeNode(val `val`: Int) {
 }
 
 fun levelOder(node:TreeNode?):List<List<Int>>{
-    addNode(node,0, emptyList<MutableList<Int>>().toMutableList())
+   val result =  addNode(node,0, emptyList<MutableList<Int>>().toMutableList())
+    return result
 
 }
 
