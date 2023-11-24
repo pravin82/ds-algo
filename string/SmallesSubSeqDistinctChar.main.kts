@@ -1,10 +1,11 @@
-#!usr/bin/env kotlin
+#!/opt/homebrew/bin/kotlin
 
 //Problem Link : https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
-import java.util.ArrayDeque
+import java.util.*
 
 fun getSmallestSubsequenceOfDistinctChar(str:String):String{
     val eleMap = mutableMapOf<Char, Int>()
+
     str.map{
         val value = eleMap.get(it)?:0
         eleMap.put(it, value+1)
